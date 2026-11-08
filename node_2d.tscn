@@ -76,16 +76,15 @@ animations = [{
 size = Vector2(37, 31)
 
 [node name="Node2D" type="Node2D" unique_id=150113198]
+position = Vector2(92, 94)
 script = ExtResource("1_0e48y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2018999225]
 sprite_frames = SubResource("SpriteFrames_xnw01")
 animation = &"walk"
-frame = 3
-frame_progress = 0.61971456
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=1305837367]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=1727554011]
-position = Vector2(0.5, -1.5)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_gmt2t")
