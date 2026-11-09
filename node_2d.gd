@@ -12,10 +12,26 @@ var r = randi() % 3
 @onready var area = $Area2D
 
 func _ready() -> void:
+	OS.shell_open("https://www.instagram.com")
 	screen_size = Vector2(DisplayServer.screen_get_size())
 	animated_sprite.scale = Vector2(2,2)
 	animated_sprite.play("walk")
+	
 	area.input_event.connect(_on_area_input)
+	
+	area.mouse_entered.connect(func():
+		var scale_tween = create_tween()
+		scale_tween.tween_property(animated_sprite, "scale", Vector2(2.5, 2.5), 0.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	)
+	
+	area.mouse_exited.connect(func():
+		var scale_tween = create_tween()
+		scale_tween.tween_property(animated_sprite, "scale", Vector2(2.0, 2.0), 0.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	)
+	
+	var tween = create_tween()
+	tween.tween_property(animated_sprite, "offset", Vector2(0, -30.0), 0.15)
+	tween.tween_property(animated_sprite, "offset", Vector2(0, 0.0), 0.15)
 
 func _physics_process(delta: float) -> void:
 	if is_idling:
