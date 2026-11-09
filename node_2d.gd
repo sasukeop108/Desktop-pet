@@ -4,7 +4,8 @@ var speed = 300
 var direction = Vector2(1,0)
 var screen_size = Vector2()
 var window_size = Vector2(200, 200)
-
+var idle_timer = 0.0
+var is_idling = false
 @onready  var animated_sprite = $AnimatedSprite2D
 
 
