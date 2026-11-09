@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://da6hevwyh0tkx"]
 
-[ext_resource type="Script" uid="uid://3xr2s8rvnrrm" path="res://node_2d.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://cqfm61bwc7u1s" path="res://syrian_gold_walk.png" id="2_epypp"]
+[ext_resource type="Script" uid="uid://bedqtc8a5c7qo" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" path="res://syrian_gold_walk.png" id="2_epypp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
 atlas = ExtResource("2_epypp")
@@ -81,7 +81,7 @@ script = ExtResource("1_0e48y")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=106979271]
 sprite_frames = SubResource("SpriteFrames_ifugn")
 animation = &"idle"
-frame_progress = 0.5084683
+frame_progress = 0.08350806
 
 [node name="Area2D" type="Area2D" parent="." unique_id=505922398]
 
